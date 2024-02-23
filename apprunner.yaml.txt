@@ -1,0 +1,7 @@
+version: 1
+runtime: python
+build:
+  commands:
+    - sudo apt-get update
+    - sudo apt-get install -y libgl1-mesa-glx
+startCommand: gunicorn -b 0.0.0.0:8080 yourapp:app
